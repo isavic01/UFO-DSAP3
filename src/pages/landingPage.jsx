@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import topStars from '../assets/images/topstars.png';
 import bottomAlien from '../assets/images/aliencut.png';
-import cowufo from '../assets/images/cowufo.png'; // ✅ Make sure this is a relative path!
+import cowufo from '../assets/images/cowufo.png';
 
 export default function LandingPage() {
   console.log('✅ LandingPage component loaded');
@@ -28,8 +28,28 @@ export default function LandingPage() {
         style={{ width: '35%', zIndex: 0 }}
       />
 
+      {/* 🐄 Cow UFO */}
+      <div className="absolute bottom-24 left-4 z-10">
+        <img
+          src={cowufo}
+          alt="cow UFO"
+          className="w-100
+           sm:w-80 md:w-96 lg:w-112 xl:w-128 2xl:w-144"
+        />
+      </div>
+
+      {/* 📝 Project credit text */}
+      <div className="absolute bottom-4 left-4 z-10 text-left ">
+        <p className="text-primaryBlue font-grover text-xl sm:text-2xl md:text-3xl leading-snug">
+          A project by: <br />
+          Isabel Hernandez, 
+          Daniel Hernandez, <br/>
+          and Cecilia Beringer
+        </p>
+      </div>
+
       {/* 🌟 Main Content */}
-      <div className="relative z-10 pb-20">
+      <div className="relative z-10 pb-20 max-w-4xl px-4">
         <h1 className="text-9xl font-grover text-primaryBlue mb-4">
           UFO Hunters
         </h1>
@@ -47,23 +67,6 @@ export default function LandingPage() {
           </div>
         </Link>
       </div>
-
-      {/* 🐄 Bottom-left image and credit */}
-      <div className="absolute bottom-0 left-0 flex flex-col items-start p-6 z-0">
-  <img
-    src={cowufo}
-    alt="cow UFO"
-    className="w-[50%] mb-3" // 🐄 stays the same size
-  />
-  <p className="text-primaryBlue font-grover text-4xl text-left leading-snug">
-    A project by: <br />
-    Isabel Hernandez, 
-    Daniel Hernandez, 
-    and Cecilia Beringer
-  </p>
-</div>
-
-
     </div>
   );
 }
