@@ -5,7 +5,7 @@ import bottomAlien from '../assets/images/aliencut.png';
 import cowufo from '../assets/images/cowufo.png';
 
 export default function LandingPage() {
-  console.log('✅ LandingPage component loaded');
+ 
 
   return (
     <div

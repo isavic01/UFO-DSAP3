@@ -24,7 +24,7 @@ export default function PredictionsPage() {
         <h1 className="text-7xl font-bold font-grover text-primaryBlue">
           UFO Predictions
         </h1>
-        {/* Universe image is absolutely positioned so it doesn't shift the text */}
+        {/* absolutely positioned so it doesn't shift the text */}
         <img
           src={universe}
           alt="universe"
@@ -35,7 +35,7 @@ export default function PredictionsPage() {
       
       {/* Row for alien, 'Select year' text, and dropdown */}
       <div className="-mt-14 pl-0 pr-0 flex items-center">
-        {/* Alien image placed before the text */}
+     
         <img 
           src={alien} 
           alt="alien full body" 
