@@ -38,7 +38,7 @@ export default function LandingPage() {
         />
       </div>
 
-      {/* 📝 Project credit text */}
+      {/*  Project credit text */}
       <div className="absolute bottom-4 left-4 z-10 text-left ">
         <p className="text-primaryBlue font-grover text-xl sm:text-2xl md:text-3xl leading-snug">
           A project by: <br />
@@ -48,7 +48,7 @@ export default function LandingPage() {
         </p>
       </div>
 
-      {/* 🌟 Main Content */}
+      {/* Main Content */}
       <div className="relative z-10 pb-20 max-w-4xl px-4">
         <h1 className="text-9xl font-grover text-primaryBlue mb-4">
           UFO Hunters
