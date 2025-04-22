@@ -12,7 +12,7 @@ export default function LandingPage() {
       className="relative flex flex-col items-center justify-center min-h-screen text-center px-4"
       style={{ backgroundColor: '#F8F3E7' }}
     >
-      {/* ⭐ Top floating image */}
+      {/* ⭐ top */}
       <img
         src={topStars}
         alt="stars"
@@ -20,7 +20,7 @@ export default function LandingPage() {
         style={{ margin: 0, padding: 0, zIndex: 0 }}
       />
 
-      {/* 👽 Bottom-right alien */}
+      {/* 👽  */}
       <img
         src={bottomAlien}
         alt="alien"
@@ -28,7 +28,7 @@ export default function LandingPage() {
         style={{ width: '35%', zIndex: 0 }}
       />
 
-      {/* 🐄 Cow UFO */}
+      {/* 🐄  */}
       <div className="absolute bottom-24 left-4 z-10">
         <img
           src={cowufo}
