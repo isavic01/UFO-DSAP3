@@ -1,17 +1,29 @@
-cmake_minimum_required(VERSION 3.14)
-project(UFOServer)
+cmake_minimum_required(VERSION 3.10)
+project(UFO_Backend)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ 
+include_directories(
+  ${CMAKE_SOURCE_DIR}/external/pistache/include
+  ${CMAKE_SOURCE_DIR}/external/libevent/include
+)
 
-# Boost & Threads
-find_package(Boost REQUIRED COMPONENTS system thread)
-find_package(Threads REQUIRED)
 
-# Enable Crow with Boost
-set(CROW_USE_BOOST ON)
-add_subdirectory(libs/Crow)
+link_directories(
+  ${CMAKE_SOURCE_DIR}/external/pistache/build/src
+  ${CMAKE_SOURCE_DIR}/external/libevent/build/lib
+)
 
-# Executable
-add_executable(server main.cpp UFO_Sightings.cpp)
-target_include_directories(server PRIVATE ${Boost_INCLUDE_DIRS})
-target_link_libraries(server PRIVATE Crow::Crow ${Boost_LIBRARIES} Threads::Threads)
+add_executable(ufo_server
+  src/main.cpp
+  src/UFO_Sightings.cpp
+)
+
+
+target_link_libraries(ufo_server
+  ${CMAKE_SOURCE_DIR}/external/pistache/build/src/libpistache.a
+  ${CMAKE_SOURCE_DIR}/external/libevent/build/lib/libevent.a
+  ${CMAKE_SOURCE_DIR}/external/libevent/build/lib/libevent_pthreads.a
+  pthread
+)
